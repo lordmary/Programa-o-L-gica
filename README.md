@@ -1,2 +1,2 @@
-# Programa-o-L-gica
+# Programacao-logica
 Programação lógica em prolog
