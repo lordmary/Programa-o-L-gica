@@ -6,9 +6,14 @@ remove_todas(X,[Y|Z],[Y|Z1]):-
     X \== Y,
     remove_todas(X,Z,Z1).
 
+insere(X,L,[X|L]).
+insere(X,[Y|Z],[Y|Z1]):-
+    insere(X,Z,Z1).
+
 permutação([],[]).
 permutação([X|Y],L):-
-    permutação(Y,Y1).
+    permutação(Y,Y1),
+    insere(X,Y1,L).
 
 concatena([],L,L).
 concatena([X|R],L,[X|C]) :-
